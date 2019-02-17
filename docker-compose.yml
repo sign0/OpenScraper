@@ -1,0 +1,32 @@
+version: '2.2'
+services:
+  
+  openscraper-mongodb:
+    container_name: openscraper-mongodb
+    image: mongo:latest
+    mem_limit: 2048m
+    restart: always
+    environment:
+      - MONGO_DATA_DIR=/data/db
+      - MONGO_LOG_DIR=/dev/null
+      - MONGO_INITDB_DATABASE=openscraper
+    volumes:
+      - ./mongodb:/data/db
+    ports:
+      - 127.0.0.1:5001:27017
+    command: mongod --smallfiles --logpath=/dev/null --quiet
+
+  openscraper-core:
+    container_name: openscraper-core
+    build: ./
+    image: openscraper-core
+    mem_limit: 2048m
+    restart: always
+    volumes:
+      - ./openscraper:/usr/src/app
+      - ./requirements.txt:/usr/src/app/requirements.txt
+    ports:
+      - 127.0.0.1:5000:3000
+    command: /bin/sh -c 'pip install -r requirements.txt && python main.py --port=3000 --mode=production'
+    depends_on:
+      - openscraper-mongodb
