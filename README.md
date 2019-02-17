@@ -135,6 +135,18 @@ OpenScraper is developped in open source, and will provide a documentation as mu
 1. **run the test spider in the browser** by clicking on the test spider at  `localhost:8000/contributors`
 
 
+### _DOCKER_
+
+1. **install docker** : [docker](https://docs.docker.com/install/linux/docker-ce/ubuntu/), [post-install](https://docs.docker.com/install/linux/linux-postinstall/) 
+1. **git clone** : `$ git clone https://github.com/entrepreneur-interet-general/OpenScraper.git`
+1. **configure openscraper/config/settings_example.py** : `MONGODB_HOST 			= "openscraper-mongodb"`
+1. **run containers** : `$ docker-compose up`
+1. enjoy !
+	- Default url : [localhost:5000](http://localhost:5000)
+	- Default login : `???`
+	- Default password : `???`
+
+
 ### _PRODUCTION_
 
 1. **get a server** - check digital ocean, OVH, ...
