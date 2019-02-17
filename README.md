@@ -141,6 +141,14 @@ OpenScraper is developped in open source, and will provide a documentation as mu
 1. **git clone** : `$ git clone https://github.com/entrepreneur-interet-general/OpenScraper.git`
 1. **configure openscraper/config/settings_example.py** : `MONGODB_HOST 			= "openscraper-mongodb"`
 1. **run containers** : `$ docker-compose up`
+1. tips :
+	- Run containers : `$ docker-compose up`
+	- Force containers creation : `$ docker-compose up --force-recreate`
+	- Stop containers : `$ docker-compose stop`
+	- Restart containers : `$ docker-compose restart`
+	- Remove containers : `$ docker-compose rm -f`
+	- List containers : `$ docker ps -a`
+	- List images : `$ docker images`
 1. enjoy !
 	- Homepage : [localhost:5000](http://localhost:5000)
 	- Admin login & password : defined during the first registration
