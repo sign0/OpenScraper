@@ -142,9 +142,8 @@ OpenScraper is developped in open source, and will provide a documentation as mu
 1. **configure openscraper/config/settings_example.py** : `MONGODB_HOST 			= "openscraper-mongodb"`
 1. **run containers** : `$ docker-compose up`
 1. enjoy !
-	- Default url : [localhost:5000](http://localhost:5000)
-	- Default login : `???`
-	- Default password : `???`
+	- Homepage : [localhost:5000](http://localhost:5000)
+	- Admin login & password : defined during the first registration
 
 
 ### _PRODUCTION_

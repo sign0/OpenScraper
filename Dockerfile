@@ -25,8 +25,4 @@ RUN pip install virtualenv
 
 RUN apt install -y chromium-chromedriver
 
-WORKDIR $APPDIR/
-
-#RUN python venv venv && source venv/bin/activate
-#RUN ls /usr/src/app
-#RUN pip install -r requirements.txt
+WORKDIR $APPDIR
